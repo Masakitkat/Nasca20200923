@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F4C259B6251B98780028E556 /* Nasca20200923App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C259B5251B98780028E556 /* Nasca20200923App.swift */; };
+		F4C259B8251B98780028E556 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C259B7251B98780028E556 /* ContentView.swift */; };
+		F4C259BA251B98790028E556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C259B9251B98790028E556 /* Assets.xcassets */; };
+		F4C259BD251B98790028E556 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C259BC251B98790028E556 /* Preview Assets.xcassets */; };
+		F4C259BF251B98790028E556 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C259BE251B98790028E556 /* Persistence.swift */; };
+		F4C259C2251B98790028E556 /* Nasca20200923.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4C259C0251B98790028E556 /* Nasca20200923.xcdatamodeld */; };
+		F4C259CD251B98790028E556 /* Nasca20200923Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C259CC251B98790028E556 /* Nasca20200923Tests.swift */; };
+		F4C259D8251B98790028E556 /* Nasca20200923UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C259D7251B98790028E556 /* Nasca20200923UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4C259C9251B98790028E556 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4C259AA251B98780028E556 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4C259B1251B98780028E556;
+			remoteInfo = Nasca20200923;
+		};
+		F4C259D4251B98790028E556 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4C259AA251B98780028E556 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4C259B1251B98780028E556;
+			remoteInfo = Nasca20200923;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F4C259B2251B98780028E556 /* Nasca20200923.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nasca20200923.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4C259B5251B98780028E556 /* Nasca20200923App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nasca20200923App.swift; sourceTree = "<group>"; };
+		F4C259B7251B98780028E556 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F4C259B9251B98790028E556 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4C259BC251B98790028E556 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F4C259BE251B98790028E556 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		F4C259C1251B98790028E556 /* Nasca20200923.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nasca20200923.xcdatamodel; sourceTree = "<group>"; };
+		F4C259C3251B98790028E556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4C259C8251B98790028E556 /* Nasca20200923Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Nasca20200923Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4C259CC251B98790028E556 /* Nasca20200923Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nasca20200923Tests.swift; sourceTree = "<group>"; };
+		F4C259CE251B98790028E556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4C259D3251B98790028E556 /* Nasca20200923UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Nasca20200923UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4C259D7251B98790028E556 /* Nasca20200923UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nasca20200923UITests.swift; sourceTree = "<group>"; };
+		F4C259D9251B98790028E556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4C259AF251B98780028E556 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4C259C5251B98790028E556 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4C259D0251B98790028E556 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4C259A9251B98780028E556 = {
+			isa = PBXGroup;
+			children = (
+				F4C259B4251B98780028E556 /* Nasca20200923 */,
+				F4C259CB251B98790028E556 /* Nasca20200923Tests */,
+				F4C259D6251B98790028E556 /* Nasca20200923UITests */,
+				F4C259B3251B98780028E556 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4C259B3251B98780028E556 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4C259B2251B98780028E556 /* Nasca20200923.app */,
+				F4C259C8251B98790028E556 /* Nasca20200923Tests.xctest */,
+				F4C259D3251B98790028E556 /* Nasca20200923UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4C259B4251B98780028E556 /* Nasca20200923 */ = {
+			isa = PBXGroup;
+			children = (
+				F4C259B5251B98780028E556 /* Nasca20200923App.swift */,
+				F4C259B7251B98780028E556 /* ContentView.swift */,
+				F4C259B9251B98790028E556 /* Assets.xcassets */,
+				F4C259BE251B98790028E556 /* Persistence.swift */,
+				F4C259C3251B98790028E556 /* Info.plist */,
+				F4C259C0251B98790028E556 /* Nasca20200923.xcdatamodeld */,
+				F4C259BB251B98790028E556 /* Preview Content */,
+			);
+			path = Nasca20200923;
+			sourceTree = "<group>";
+		};
+		F4C259BB251B98790028E556 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F4C259BC251B98790028E556 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F4C259CB251B98790028E556 /* Nasca20200923Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F4C259CC251B98790028E556 /* Nasca20200923Tests.swift */,
+				F4C259CE251B98790028E556 /* Info.plist */,
+			);
+			path = Nasca20200923Tests;
+			sourceTree = "<group>";
+		};
+		F4C259D6251B98790028E556 /* Nasca20200923UITests */ = {
+			isa = PBXGroup;
+			children = (
+				F4C259D7251B98790028E556 /* Nasca20200923UITests.swift */,
+				F4C259D9251B98790028E556 /* Info.plist */,
+			);
+			path = Nasca20200923UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4C259B1251B98780028E556 /* Nasca20200923 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4C259DC251B98790028E556 /* Build configuration list for PBXNativeTarget "Nasca20200923" */;
+			buildPhases = (
+				F4C259AE251B98780028E556 /* Sources */,
+				F4C259AF251B98780028E556 /* Frameworks */,
+				F4C259B0251B98780028E556 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nasca20200923;
+			productName = Nasca20200923;
+			productReference = F4C259B2251B98780028E556 /* Nasca20200923.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4C259C7251B98790028E556 /* Nasca20200923Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4C259DF251B98790028E556 /* Build configuration list for PBXNativeTarget "Nasca20200923Tests" */;
+			buildPhases = (
+				F4C259C4251B98790028E556 /* Sources */,
+				F4C259C5251B98790028E556 /* Frameworks */,
+				F4C259C6251B98790028E556 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4C259CA251B98790028E556 /* PBXTargetDependency */,
+			);
+			name = Nasca20200923Tests;
+			productName = Nasca20200923Tests;
+			productReference = F4C259C8251B98790028E556 /* Nasca20200923Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F4C259D2251B98790028E556 /* Nasca20200923UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4C259E2251B98790028E556 /* Build configuration list for PBXNativeTarget "Nasca20200923UITests" */;
+			buildPhases = (
+				F4C259CF251B98790028E556 /* Sources */,
+				F4C259D0251B98790028E556 /* Frameworks */,
+				F4C259D1251B98790028E556 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4C259D5251B98790028E556 /* PBXTargetDependency */,
+			);
+			name = Nasca20200923UITests;
+			productName = Nasca20200923UITests;
+			productReference = F4C259D3251B98790028E556 /* Nasca20200923UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4C259AA251B98780028E556 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					F4C259B1251B98780028E556 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					F4C259C7251B98790028E556 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = F4C259B1251B98780028E556;
+					};
+					F4C259D2251B98790028E556 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = F4C259B1251B98780028E556;
+					};
+				};
+			};
+			buildConfigurationList = F4C259AD251B98780028E556 /* Build configuration list for PBXProject "Nasca20200923" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4C259A9251B98780028E556;
+			productRefGroup = F4C259B3251B98780028E556 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4C259B1251B98780028E556 /* Nasca20200923 */,
+				F4C259C7251B98790028E556 /* Nasca20200923Tests */,
+				F4C259D2251B98790028E556 /* Nasca20200923UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4C259B0251B98780028E556 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4C259BD251B98790028E556 /* Preview Assets.xcassets in Resources */,
+				F4C259BA251B98790028E556 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4C259C6251B98790028E556 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4C259D1251B98790028E556 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4C259AE251B98780028E556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4C259BF251B98790028E556 /* Persistence.swift in Sources */,
+				F4C259B8251B98780028E556 /* ContentView.swift in Sources */,
+				F4C259C2251B98790028E556 /* Nasca20200923.xcdatamodeld in Sources */,
+				F4C259B6251B98780028E556 /* Nasca20200923App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4C259C4251B98790028E556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4C259CD251B98790028E556 /* Nasca20200923Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4C259CF251B98790028E556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4C259D8251B98790028E556 /* Nasca20200923UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4C259CA251B98790028E556 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4C259B1251B98780028E556 /* Nasca20200923 */;
+			targetProxy = F4C259C9251B98790028E556 /* PBXContainerItemProxy */;
+		};
+		F4C259D5251B98790028E556 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4C259B1251B98780028E556 /* Nasca20200923 */;
+			targetProxy = F4C259D4251B98790028E556 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F4C259DA251B98790028E556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F4C259DB251B98790028E556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4C259DD251B98790028E556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Nasca20200923/Preview Content\"";
+				DEVELOPMENT_TEAM = 856ZD22WG5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Nasca20200923/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nasca.Nasca20200923;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4C259DE251B98790028E556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Nasca20200923/Preview Content\"";
+				DEVELOPMENT_TEAM = 856ZD22WG5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Nasca20200923/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nasca.Nasca20200923;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F4C259E0251B98790028E556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 856ZD22WG5;
+				INFOPLIST_FILE = Nasca20200923Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nasca.Nasca20200923Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nasca20200923.app/Nasca20200923";
+			};
+			name = Debug;
+		};
+		F4C259E1251B98790028E556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 856ZD22WG5;
+				INFOPLIST_FILE = Nasca20200923Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nasca.Nasca20200923Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nasca20200923.app/Nasca20200923";
+			};
+			name = Release;
+		};
+		F4C259E3251B98790028E556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 856ZD22WG5;
+				INFOPLIST_FILE = Nasca20200923UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nasca.Nasca20200923UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nasca20200923;
+			};
+			name = Debug;
+		};
+		F4C259E4251B98790028E556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 856ZD22WG5;
+				INFOPLIST_FILE = Nasca20200923UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Nasca.Nasca20200923UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nasca20200923;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4C259AD251B98780028E556 /* Build configuration list for PBXProject "Nasca20200923" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4C259DA251B98790028E556 /* Debug */,
+				F4C259DB251B98790028E556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4C259DC251B98790028E556 /* Build configuration list for PBXNativeTarget "Nasca20200923" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4C259DD251B98790028E556 /* Debug */,
+				F4C259DE251B98790028E556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4C259DF251B98790028E556 /* Build configuration list for PBXNativeTarget "Nasca20200923Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4C259E0251B98790028E556 /* Debug */,
+				F4C259E1251B98790028E556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4C259E2251B98790028E556 /* Build configuration list for PBXNativeTarget "Nasca20200923UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4C259E3251B98790028E556 /* Debug */,
+				F4C259E4251B98790028E556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F4C259C0251B98790028E556 /* Nasca20200923.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F4C259C1251B98790028E556 /* Nasca20200923.xcdatamodel */,
+			);
+			currentVersion = F4C259C1251B98790028E556 /* Nasca20200923.xcdatamodel */;
+			path = Nasca20200923.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F4C259AA251B98780028E556 /* Project object */;
+}
