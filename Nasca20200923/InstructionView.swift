@@ -99,20 +99,21 @@ struct InstructionView: View {
 
                 ZStack {
                     LiquidSwipeView(pageIndex: $pageindex)
+                    
                     VStack
                     {
                         Spacer()
-                        Text(self.texti[self.pageindex] + self.textii)
+//                        Text(self.texti[self.pageindex] + self.textii)
+                        Text("\(self.texti[self.pageindex])")
                             .font(.title3)
                             .bold()
                             .padding()
+                            //                            .foregroundColor(.blue)
                             .foregroundColor(self.pageindex % 2 == 0 ? .black : .white)
                         
-                        
-                            
                         Spacer()
-//                            .frame(height : 100)
-                           
+                        //                            .frame(height : 100)
+                        
                     }
                     .frame(width: geometry.size.width - 50, height :geometry.size.height - 50, alignment : .center)
                 .onAppear(){

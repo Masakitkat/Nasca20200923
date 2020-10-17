@@ -31,6 +31,7 @@
 		F4CCC6A4253ADE7900D15E08 /* LiquidSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CCC6A3253ADE7900D15E08 /* LiquidSwipeView.swift */; };
 		F4CCC6AF253ADEA000D15E08 /* SliderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CCC6AE253ADEA000D15E08 /* SliderData.swift */; };
 		F4CCC6B7253ADEB100D15E08 /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CCC6B6253ADEB100D15E08 /* WaveView.swift */; };
+		F4CCC6BF253B08C300D15E08 /* OnlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CCC6BE253B08C300D15E08 /* OnlineView.swift */; };
 		F4D2C8F0251F59BC00974C9F /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2C8EF251F59BC00974C9F /* GraphView.swift */; };
 		F4D2C8F5251F6A4000974C9F /* SonSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2C8F4251F6A4000974C9F /* SonSummaryView.swift */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,7 @@
 		F4CCC6A3253ADE7900D15E08 /* LiquidSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiquidSwipeView.swift; sourceTree = "<group>"; };
 		F4CCC6AE253ADEA000D15E08 /* SliderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderData.swift; sourceTree = "<group>"; };
 		F4CCC6B6253ADEB100D15E08 /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
+		F4CCC6BE253B08C300D15E08 /* OnlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineView.swift; sourceTree = "<group>"; };
 		F4D2C8EF251F59BC00974C9F /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		F4D2C8F4251F6A4000974C9F /* SonSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonSummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +145,7 @@
 				F4C259B7251B98780028E556 /* ContentView.swift */,
 				F4C25A42251BA80F0028E556 /* TopView.swift */,
 				F4C25A52251BA9060028E556 /* InstructionView.swift */,
+				F4CCC6BE253B08C300D15E08 /* OnlineView.swift */,
 				F4C25A5A251BAA390028E556 /* MemoView.swift */,
 				F4C25A47251BA8F70028E556 /* ListView.swift */,
 				F40346FF252EEB160051417E /* MemoModalView2.swift */,
@@ -322,6 +325,7 @@
 				F4CCC63E253020F900D15E08 /* Nasca_game1.swift in Sources */,
 				F4C259FD251B9B430028E556 /* Idea+CoreDataClass.swift in Sources */,
 				F4CCC6AF253ADEA000D15E08 /* SliderData.swift in Sources */,
+				F4CCC6BF253B08C300D15E08 /* OnlineView.swift in Sources */,
 				F4C259BF251B98790028E556 /* Persistence.swift in Sources */,
 				F4CCC64925314E6A00D15E08 /* MemoModal_game.swift in Sources */,
 				F4883B97252DED8300F43787 /* ListDetail.swift in Sources */,

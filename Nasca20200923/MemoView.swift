@@ -144,8 +144,8 @@ struct MemoView: View {
     var body: some View {
 
             ZStack {
+                
                 VStack {
-                    
                     if game != true {
                     ZStack{
                         Color.white.opacity(0.7)

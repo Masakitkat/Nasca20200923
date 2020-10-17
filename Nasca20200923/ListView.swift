@@ -55,7 +55,7 @@ struct ListView : View {
     @State var tag_choiced_2 = true
     
     @State var tagview1 = true
-    @State var tagview2 = true
+    @State var tagview2 = false
     
     @State var show_tagsetting = false
     

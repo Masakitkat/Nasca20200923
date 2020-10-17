@@ -102,6 +102,7 @@ struct TopView: View {
                 
                 ZStack{
                     
+                    
                     RoundedRectangle(cornerRadius: 20)
                         .fill(swipe_backgroundcolor.opacity(0.4))
                         .shadow(color: Color.white.opacity(0.6), radius: 1, x: 1, y: 2)
@@ -113,9 +114,11 @@ struct TopView: View {
                     
                     HStack{
                         
+                        
                         RoundedRectangle(cornerRadius:20)
                             .fill(swipe_smallcircle)
                             .frame(width : calculateWidth() + 60)
+                        
                         
                         Spacer(minLength: 0)
                         

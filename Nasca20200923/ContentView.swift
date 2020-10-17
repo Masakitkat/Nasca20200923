@@ -154,9 +154,22 @@ struct Main: View {
             //                .onAppear(){
             //                    pagetitle = "test "
             //                }
-        
+            case "Online":
+                
+                OnlineView()
+                    .onAppear(perform: {
+                        pagetitle = "Home"
+                    })
+                
         default:
-            MemoView()
+            OnlineView()
+                .onAppear(perform: {
+                    pagetitle = "Home"
+                })
+//            MemoView()
+//                .onAppear(){
+//                    pagetitle = "Idea Memo"
+//                }
         }
         
             
@@ -276,13 +289,13 @@ struct Main: View {
                    
                    VStack(alignment: .leading, content : {
                        
-                    MenuButtons(image: "text.badge.plus", title : "メモを書く", view: "Memo",selected: $selectedView, show : $show)
+                    MenuButtons(image: "network", title : "交流する", view: "Online",selected: $selectedView, show : $show)
                     MenuButtons(image: "list.bullet", title : "リストを見る", view: "List",selected: $selectedView, show : $show)
                     MenuButtons(image: "chart.bar.xaxis", title : "グラフで分析する", view: "Graph",selected: $selectedView, show : $show)
                     MenuButtons(image: "swift", title : "考えてみる", view: "Son",selected: $selectedView, show : $show)
                     MenuButtons(image: "gear", title : "設定", view: "test",selected: $selectedView, show : $show)
                     MenuButtons(image: "info.circle", title : "よくあるご質問", view: "Top",selected: $selectedView, show : $show)
-                    MenuButtons(image: "envelope.fill", title : "私たちについて", view: "",selected: $selectedView, show : $show)
+                    MenuButtons(image: "envelope.fill", title : "私たちについて", view: "Inst",selected: $selectedView, show : $show)
                        
                    })
 //                   .padding(.top)
@@ -378,17 +391,18 @@ struct TabBar : View {
         HStack(spacing : 35){
             Button(action:{
                 withAnimation{
-                selectedView = "Memo"
+//                selectedView = "Memo"
+                    selectedView = "Online"
                 }
             }){
-                VStack(spacing : 10){
+                VStack(spacing : 5){
                     Image(systemName:"house.fill")
                         .font(.title3)
                     Text("Home")
                         .font(.caption)}
             }.buttonStyle(GradientButtonStyle())
             .padding(.top)
-            .foregroundColor(Color.white.opacity(self.selectedView == "Memo" ? 1 : 0.2))
+            .foregroundColor(Color.white.opacity(self.selectedView == "Online" ? 1 : 0.2))
             //        Spacer(minLength: 0)
             
             
