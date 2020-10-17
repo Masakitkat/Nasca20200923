@@ -455,7 +455,7 @@ struct TabBar : View {
                 }
             }){
                 VStack(spacing:10){
-                    Image(systemName:"swift")
+                    Image(systemName:"person.crop.circle")
                         .font(.title3)
                     Text("Account")
                         .font(.caption)}
