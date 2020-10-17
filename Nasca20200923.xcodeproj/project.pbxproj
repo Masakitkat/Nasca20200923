@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4034700252EEB160051417E /* MemoModalView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40346FF252EEB160051417E /* MemoModalView2.swift */; };
+		F4883B97252DED8300F43787 /* ListDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4883B96252DED8300F43787 /* ListDetail.swift */; };
 		F4C259B6251B98780028E556 /* Nasca20200923App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C259B5251B98780028E556 /* Nasca20200923App.swift */; };
 		F4C259B8251B98780028E556 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C259B7251B98780028E556 /* ContentView.swift */; };
 		F4C259BA251B98790028E556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C259B9251B98790028E556 /* Assets.xcassets */; };
@@ -15,6 +17,22 @@
 		F4C259C2251B98790028E556 /* Nasca20200923.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4C259C0251B98790028E556 /* Nasca20200923.xcdatamodeld */; };
 		F4C259CD251B98790028E556 /* Nasca20200923Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C259CC251B98790028E556 /* Nasca20200923Tests.swift */; };
 		F4C259D8251B98790028E556 /* Nasca20200923UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C259D7251B98790028E556 /* Nasca20200923UITests.swift */; };
+		F4C259FD251B9B430028E556 /* Idea+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C259FB251B9B430028E556 /* Idea+CoreDataClass.swift */; };
+		F4C25A1E251B9E660028E556 /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C25A1D251B9E660028E556 /* Tag+CoreDataProperties.swift */; };
+		F4C25A23251B9EBC0028E556 /* Tag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C25A22251B9EBC0028E556 /* Tag+CoreDataClass.swift */; };
+		F4C25A43251BA80F0028E556 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C25A42251BA80F0028E556 /* TopView.swift */; };
+		F4C25A48251BA8F70028E556 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C25A47251BA8F70028E556 /* ListView.swift */; };
+		F4C25A53251BA9060028E556 /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C25A52251BA9060028E556 /* InstructionView.swift */; };
+		F4C25A5B251BAA390028E556 /* MemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C25A5A251BAA390028E556 /* MemoView.swift */; };
+		F4C25A69251BAB550028E556 /* Idea+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C25A68251BAB550028E556 /* Idea+CoreDataProperties.swift */; };
+		F4C25A7A251C59580028E556 /* LiquidSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C25A79251C59580028E556 /* LiquidSwipeView.swift */; };
+		F4C25A7F251C59600028E556 /* SliderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C25A7E251C59600028E556 /* SliderData.swift */; };
+		F4C25A84251C59680028E556 /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C25A83251C59680028E556 /* WaveView.swift */; };
+		F4CCC63E253020F900D15E08 /* Nasca_game1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CCC63D253020F900D15E08 /* Nasca_game1.swift */; };
+		F4CCC64925314E6A00D15E08 /* MemoModal_game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CCC64825314E6A00D15E08 /* MemoModal_game.swift */; };
+		F4CCC65D25342A8300D15E08 /* TagModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CCC65C25342A8300D15E08 /* TagModalView.swift */; };
+		F4D2C8F0251F59BC00974C9F /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2C8EF251F59BC00974C9F /* GraphView.swift */; };
+		F4D2C8F5251F6A4000974C9F /* SonSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2C8F4251F6A4000974C9F /* SonSummaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F40346FF252EEB160051417E /* MemoModalView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoModalView2.swift; sourceTree = "<group>"; };
+		F4883B96252DED8300F43787 /* ListDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetail.swift; sourceTree = "<group>"; };
 		F4C259B2251B98780028E556 /* Nasca20200923.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nasca20200923.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C259B5251B98780028E556 /* Nasca20200923App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nasca20200923App.swift; sourceTree = "<group>"; };
 		F4C259B7251B98780028E556 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +69,22 @@
 		F4C259D3251B98790028E556 /* Nasca20200923UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Nasca20200923UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C259D7251B98790028E556 /* Nasca20200923UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nasca20200923UITests.swift; sourceTree = "<group>"; };
 		F4C259D9251B98790028E556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4C259FB251B9B430028E556 /* Idea+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Idea+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F4C25A1D251B9E660028E556 /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F4C25A22251B9EBC0028E556 /* Tag+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F4C25A42251BA80F0028E556 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
+		F4C25A47251BA8F70028E556 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		F4C25A52251BA9060028E556 /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
+		F4C25A5A251BAA390028E556 /* MemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoView.swift; sourceTree = "<group>"; };
+		F4C25A68251BAB550028E556 /* Idea+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Idea+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F4C25A79251C59580028E556 /* LiquidSwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LiquidSwipeView.swift; path = "../../../../Downloads/LiquidSwipe-master/LiquidSwipe/LiquidSwipeView.swift"; sourceTree = "<group>"; };
+		F4C25A7E251C59600028E556 /* SliderData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SliderData.swift; path = "../../../../Downloads/LiquidSwipe-master/LiquidSwipe/SliderData.swift"; sourceTree = "<group>"; };
+		F4C25A83251C59680028E556 /* WaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaveView.swift; path = "../../../../Downloads/LiquidSwipe-master/LiquidSwipe/WaveView.swift"; sourceTree = "<group>"; };
+		F4CCC63D253020F900D15E08 /* Nasca_game1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nasca_game1.swift; sourceTree = "<group>"; };
+		F4CCC64825314E6A00D15E08 /* MemoModal_game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoModal_game.swift; sourceTree = "<group>"; };
+		F4CCC65C25342A8300D15E08 /* TagModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagModalView.swift; sourceTree = "<group>"; };
+		F4D2C8EF251F59BC00974C9F /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		F4D2C8F4251F6A4000974C9F /* SonSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonSummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +115,10 @@
 		F4C259A9251B98780028E556 = {
 			isa = PBXGroup;
 			children = (
+				F4C25A1D251B9E660028E556 /* Tag+CoreDataProperties.swift */,
+				F4C25A22251B9EBC0028E556 /* Tag+CoreDataClass.swift */,
+				F4C259FB251B9B430028E556 /* Idea+CoreDataClass.swift */,
+				F4C25A68251BAB550028E556 /* Idea+CoreDataProperties.swift */,
 				F4C259B4251B98780028E556 /* Nasca20200923 */,
 				F4C259CB251B98790028E556 /* Nasca20200923Tests */,
 				F4C259D6251B98790028E556 /* Nasca20200923UITests */,
@@ -101,6 +141,20 @@
 			children = (
 				F4C259B5251B98780028E556 /* Nasca20200923App.swift */,
 				F4C259B7251B98780028E556 /* ContentView.swift */,
+				F4C25A42251BA80F0028E556 /* TopView.swift */,
+				F4C25A52251BA9060028E556 /* InstructionView.swift */,
+				F4C25A5A251BAA390028E556 /* MemoView.swift */,
+				F4C25A47251BA8F70028E556 /* ListView.swift */,
+				F40346FF252EEB160051417E /* MemoModalView2.swift */,
+				F4CCC64825314E6A00D15E08 /* MemoModal_game.swift */,
+				F4883B96252DED8300F43787 /* ListDetail.swift */,
+				F4CCC65C25342A8300D15E08 /* TagModalView.swift */,
+				F4D2C8EF251F59BC00974C9F /* GraphView.swift */,
+				F4D2C8F4251F6A4000974C9F /* SonSummaryView.swift */,
+				F4CCC63D253020F900D15E08 /* Nasca_game1.swift */,
+				F4C25A79251C59580028E556 /* LiquidSwipeView.swift */,
+				F4C25A7E251C59600028E556 /* SliderData.swift */,
+				F4C25A83251C59680028E556 /* WaveView.swift */,
 				F4C259B9251B98790028E556 /* Assets.xcassets */,
 				F4C259BE251B98790028E556 /* Persistence.swift */,
 				F4C259C3251B98790028E556 /* Info.plist */,
@@ -265,9 +319,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4CCC63E253020F900D15E08 /* Nasca_game1.swift in Sources */,
+				F4C259FD251B9B430028E556 /* Idea+CoreDataClass.swift in Sources */,
+				F4C25A84251C59680028E556 /* WaveView.swift in Sources */,
 				F4C259BF251B98790028E556 /* Persistence.swift in Sources */,
+				F4CCC64925314E6A00D15E08 /* MemoModal_game.swift in Sources */,
+				F4883B97252DED8300F43787 /* ListDetail.swift in Sources */,
+				F4C25A48251BA8F70028E556 /* ListView.swift in Sources */,
+				F4C25A23251B9EBC0028E556 /* Tag+CoreDataClass.swift in Sources */,
+				F4D2C8F5251F6A4000974C9F /* SonSummaryView.swift in Sources */,
 				F4C259B8251B98780028E556 /* ContentView.swift in Sources */,
+				F4C25A7A251C59580028E556 /* LiquidSwipeView.swift in Sources */,
+				F4CCC65D25342A8300D15E08 /* TagModalView.swift in Sources */,
+				F4D2C8F0251F59BC00974C9F /* GraphView.swift in Sources */,
+				F4034700252EEB160051417E /* MemoModalView2.swift in Sources */,
 				F4C259C2251B98790028E556 /* Nasca20200923.xcdatamodeld in Sources */,
+				F4C25A1E251B9E660028E556 /* Tag+CoreDataProperties.swift in Sources */,
+				F4C25A53251BA9060028E556 /* InstructionView.swift in Sources */,
+				F4C25A43251BA80F0028E556 /* TopView.swift in Sources */,
+				F4C25A5B251BAA390028E556 /* MemoView.swift in Sources */,
+				F4C25A69251BAB550028E556 /* Idea+CoreDataProperties.swift in Sources */,
+				F4C25A7F251C59600028E556 /* SliderData.swift in Sources */,
 				F4C259B6251B98780028E556 /* Nasca20200923App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +501,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Nasca20200923/Preview Content\"";
 				DEVELOPMENT_TEAM = 856ZD22WG5;
 				ENABLE_PREVIEWS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = Nasca20200923/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -451,6 +524,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Nasca20200923/Preview Content\"";
 				DEVELOPMENT_TEAM = 856ZD22WG5;
 				ENABLE_PREVIEWS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = Nasca20200923/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
