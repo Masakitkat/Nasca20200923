@@ -26,7 +26,13 @@ extension Idea {
     @NSManaged public var id: UUID?
     @NSManaged public var text: String?
     @NSManaged public var title: String?
+    @NSManaged public var shared: Bool
+    @NSManaged public var titleholder1: String
+    @NSManaged public var titleholder2: String
+    @NSManaged public var titleholder3: String
+    @NSManaged public var user: String
     @NSManaged public var tag: NSSet?
+    
 
     public var wrappedtitle : String {
         title ?? "No title"

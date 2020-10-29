@@ -47,7 +47,7 @@ struct TopView: View {
                  
                 DispatchQueue.main.asyncAfter(deadline : .now() + 0.1){
                     
-                    selected = "memo"
+                    selected = "Online"
                     
                 }
             }

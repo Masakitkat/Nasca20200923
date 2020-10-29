@@ -9,8 +9,13 @@
         <attribute name="eval3" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="eval3_text" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="shared" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="text" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="titleholder1" optional="YES" attributeType="String"/>
+        <attribute name="titleholder2" optional="YES" attributeType="String"/>
+        <attribute name="titleholder3" optional="YES" attributeType="String"/>
+        <attribute name="user" optional="YES" attributeType="String"/>
         <relationship name="tag" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="idea" inverseEntity="Tag"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
@@ -34,7 +39,7 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="Idea" positionX="-63" positionY="-18" width="128" height="208"/>
+        <element name="Idea" positionX="-63" positionY="-18" width="128" height="283"/>
         <element name="Tag" positionX="-63" positionY="36" width="128" height="163"/>
     </elements>
 </model>

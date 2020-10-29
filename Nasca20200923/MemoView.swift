@@ -9,6 +9,7 @@ import SwiftUI
 import CoreData
 
 
+
 struct MemoView: View {
 
     @Environment(\.managedObjectContext) private var viewContext
@@ -20,6 +21,11 @@ struct MemoView: View {
     var hex = ["#EBCA3F","#D26873","#D26873","#2A34E1","#2A34E1","#EBCA3F","486d8b","d22b55","81b27f","#EBCA3F","#D26873","#D26873","#2A34E1","#2A34E1","#EBCA3F","486d8b","d22b55","81b27f"]
     
     var edges = UIApplication.shared.windows.first?.safeAreaInsets
+    
+    @State var activeSheet: ActiveSheet?
+    
+    @StateObject var IdeaData = IdeaFB()
+    @AppStorage("stored_Username") var user = ""
     
 //    let animation : Namespace.ID
     @Namespace private var animation
@@ -53,12 +59,14 @@ struct MemoView: View {
     
     @State var i = 1
     
-    @State var modal : Bool = false
+    @Binding var modal : Bool
     @State var game : Bool = false
     @State var conc_image = Color.white.opacity(0.3)
     @State var conc_text = ""
     @State var abst_image = Color.white.opacity(0.3)
     @State var abst_text = ""
+    
+    @State var shared = false
     
     
     func add() {
@@ -68,7 +76,7 @@ struct MemoView: View {
             
             newidea.id = UUID()
             newidea.title = ideaTitle
-            newidea.text = ideatext
+//            newidea.text = ideatext
             newidea.eval1 = Int16(selected[0])
             newidea.eval2 = Int16(selected[1])
             newidea.eval3 = Int16(selected[2])
@@ -76,6 +84,7 @@ struct MemoView: View {
             newidea.eval2_text = eval_selected[1]
             newidea.eval3_text = eval_selected[2]
             newidea.date = Date()
+            newidea.shared = shared
             
             
         while count < tag_selected.count || count == 0 && tag_selected.count != 0 {
@@ -143,6 +152,7 @@ struct MemoView: View {
     
     var body: some View {
 
+//        NavigationView{
             ZStack {
                 
                 VStack {
@@ -151,12 +161,12 @@ struct MemoView: View {
                         Color.white.opacity(0.7)
                             .cornerRadius(10)
                             .blur(radius:5)
-//                            .padding(.vertical,1)
+                            .padding(.vertical,10)
 
                     VStack(alignment : .leading) {
                         Text(self.proverbs[self.i].text)
                             .font(.system(size:20))
-                            .fontWeight(.heavy)
+//                            .fontWeight(.heavy)
                         Spacer().frame(height : 5)
                         HStack{
                             Text(self.proverbs[self.i].author)
@@ -173,14 +183,18 @@ struct MemoView: View {
                             }
                         }.font(.caption)
                         .foregroundColor(.gray)
-                    }.padding(.horizontal)
+                    }
+//                    .padding(.top)
+                    .padding(.horizontal)
+                    
                     }
                     .onAppear(perform: {
                         proverb_loop()
                     })
                     
-                    .padding(.top, 100)
-                    .frame(width: UIScreen.main.bounds.width - 20,height: 300)
+//                    .padding(.top, 120)
+                    
+                    .frame(width: UIScreen.main.bounds.width - 20, height : UIScreen.main.bounds.height/4.5)
                     }
                     
                     else {
@@ -228,7 +242,7 @@ struct MemoView: View {
 //                            .frame(width:UIScreen.main.bounds.width - 20, height: UIScreen.main.bounds.height/4)
                         VStack {
                             
-                            TextField("思いついたことを書いてみよう！",text: self.$ideatext)
+                            TextField("思いついたことを書いてみよう！",text: self.$ideaTitle)
                                 .font(.body)
                                 .multilineTextAlignment(.center)
                                 .frame(width: UIScreen.main.bounds.width - 100, height: UIScreen.main.bounds.height/5)
@@ -260,7 +274,8 @@ struct MemoView: View {
                                             .bold()
                                             .padding()
                                             
-                                    }.matchedGeometryEffect(id: tag.text, in: animation)
+                                    }
+//                                    .matchedGeometryEffect(id: tag.text, in: animation)
                                     
                                     .contextMenu{
                                         Button(action: {
@@ -278,11 +293,7 @@ struct MemoView: View {
                         .padding(.horizontal)
                         .frame(height : 40)
                     }
-                    
-                    
 
-                    
-                    
                     ZStack(alignment: .bottomTrailing) {
                         
                         
@@ -389,7 +400,7 @@ struct MemoView: View {
                                                     .zIndex(5)
                                                     
                                             }
-                                            .matchedGeometryEffect(id: tag.text, in: animation)
+//                                            .matchedGeometryEffect(id: tag.text, in: animation)
                                             .contextMenu{
                                                 Button(action: {
                                                     viewContext.delete(tag)
@@ -405,7 +416,7 @@ struct MemoView: View {
                                         
                                         Button(action:{
                                             
-                                            
+                                            self.modal.toggle()
                                             
                                         }){
                                             ZStack(alignment : .leading) {
@@ -428,89 +439,98 @@ struct MemoView: View {
                                 }
                                 .animation(.default)
                                 .padding(.top)
-                                .frame(height:150,alignment: .top)
+                                .frame(height:250,alignment: .top)
                                 
                             }
                             .padding(.all)
-                            .background(Color.black.opacity(0.06))
+//                            .foregroundColor(Color.white)
+                            .background(Color(#colorLiteral(red: 0.8823529412, green: 0.777484452, blue: 0.6784313725, alpha: 1)).opacity(0.5))
                             .cornerRadius(12)
-                            .onTapGesture(count: 2, perform: {
-                                withAnimation{
-                                self.tag_show = false
-                                }
-                            })
                             .onTapGesture(count: 1, perform: {
                                 withAnimation{
-                                self.tag_show = true
+                                    self.tag_show.toggle()
                                 }
                             })
+                            
+                            Toggle(isOn: $shared){
+                                Text("共有しない")
+                                    .bold()
+                            }
+                            .toggleStyle(SwitchToggleStyle(tint: Color("top")))
+                            .padding(.horizontal,5)
+                                
+//                            .onTapGesture(count: 1, perform: {
+//                                withAnimation{
+//                                self.tag_show = true
+//                                }
+//                            })
 //                                }.buttonStyle(PlainButtonStyle())
                             
 
-                            DisclosureGroup("評価",isExpanded : self.$eval_show){
-                                
-                                VStack {
-                                    
-                                    Button(action:{withAnimation{
-                                            self.evals_show[0].toggle()}}){
-                                    DicloseView(expand_key: self.$evals_show[0], text1: self.$eval_selected[0], text2 : "\(self.eval_selected[0])")
-                                    }
-                                    
-                                    Slider(value : self.$selected[0], in: 0...100,step:1,
-                                           minimumValueLabel: Text("0"),
-                                           maximumValueLabel: Text("100"),
-                                           label: { EmptyView() }
-                                    ).frame(alignment: .top)
-                                    
-                                }
-                                .padding(.vertical)
-                                
-                                
-                                VStack {
-                                    
-                                    Button(action:{withAnimation{
-                                            self.evals_show[1].toggle()}}){
-                                    DicloseView(expand_key: self.$evals_show[1], text1: self.$eval_selected[1], text2 : "\(self.eval_selected[1])")
-                                    }
-                                    Slider(value : self.$selected[1], in: 0...100,step:1,
-                                           minimumValueLabel: Text("0"),
-                                           maximumValueLabel: Text("100"),
-                                           label: { EmptyView() }
-                                    ).frame(alignment: .top)
-                                    
-                                }
-                                .padding(.vertical)
-                                
-                                VStack {
-                                    Button(action:{withAnimation{
-                                            self.evals_show[2].toggle()}}){
-                                    DicloseView(expand_key: self.$evals_show[2], text1: self.$eval_selected[1], text2 : "\(self.eval_selected[2])")
-                                    }
-                                    
-                                    Slider(value : self.$selected[2], in: 0...100,step:1,
-                                           minimumValueLabel: Text("0"),
-                                           maximumValueLabel: Text("100"),
-                                           label: { EmptyView() }
-                                    ).frame(alignment: .top)
-                                    
-                                }
-                                .padding(.vertical)
-                            }
-                            .padding(.all)
-                            .background(Color(hex: "E8D6AE").opacity(0.6))
-                            //                    .background(Color.black.opacity(0.06))
-                            .cornerRadius(12)
-                                .buttonStyle(PlainButtonStyle())
-                            .onTapGesture(count: 2, perform: {
-                                withAnimation{
-                                self.eval_show = false
-                                }
-                            })
-                            .onTapGesture(count: 1, perform: {
-                                withAnimation{
-                                self.eval_show = true
-                                }
-                            })
+//                            DisclosureGroup("評価",isExpanded : self.$eval_show){
+//
+//                                VStack {
+//
+//                                    Button(action:{withAnimation{
+//                                            self.evals_show[0].toggle()}}){
+//                                    DicloseView(expand_key: self.$evals_show[0], text1: self.$eval_selected[0], text2 : "\(self.eval_selected[0])")
+//                                    }
+//
+//                                    Slider(value : self.$selected[0], in: 0...100,step:1,
+//                                           minimumValueLabel: Text("0"),
+//                                           maximumValueLabel: Text("100"),
+//                                           label: { EmptyView() }
+//                                    ).frame(alignment: .top)
+//
+//                                }
+//                                .padding(.vertical)
+//
+//
+//                                VStack {
+//
+//                                    Button(action:{withAnimation{
+//                                            self.evals_show[1].toggle()}}){
+//                                    DicloseView(expand_key: self.$evals_show[1], text1: self.$eval_selected[1], text2 : "\(self.eval_selected[1])")
+//                                    }
+//                                    Slider(value : self.$selected[1], in: 0...100,step:1,
+//                                           minimumValueLabel: Text("0"),
+//                                           maximumValueLabel: Text("100"),
+//                                           label: { EmptyView() }
+//                                    ).frame(alignment: .top)
+//
+//                                }
+//                                .padding(.vertical)
+//
+//                                VStack {
+//                                    Button(action:{withAnimation{
+//                                            self.evals_show[2].toggle()}}){
+//                                    DicloseView(expand_key: self.$evals_show[2], text1: self.$eval_selected[1], text2 : "\(self.eval_selected[2])")
+//                                    }
+//
+//                                    Slider(value : self.$selected[2], in: 0...100,step:1,
+//                                           minimumValueLabel: Text("0"),
+//                                           maximumValueLabel: Text("100"),
+//                                           label: { EmptyView() }
+//                                    ).frame(alignment: .top)
+//
+//                                }
+//                                .padding(.vertical)
+//                            }
+//                            .padding(.all)
+//                            .background(Color(hex: "E8D6AE").opacity(0.6))
+//                            //                    .background(Color.black.opacity(0.06))
+//                            .cornerRadius(12)
+//                                .buttonStyle(PlainButtonStyle())
+//                            .onTapGesture(count: 2, perform: {
+//                                withAnimation{
+//                                self.eval_show = false
+//                                }
+//                            })
+//                            .onTapGesture(count: 1, perform: {
+//                                withAnimation{
+//                                self.eval_show = true
+//                                }
+//                            })
                             }
                             
                             VStack(alignment : .leading) {
@@ -526,9 +546,9 @@ struct MemoView: View {
                                         ForEach(self.rand_ideas, id :\.self){ idea in
                                         
                                             
-                                            let ideatext = idea.text ?? ""
+                                            let ideatext = idea.title ?? ""
                                             
-                                            if  idea.tagArray.compactMap({$0.text}).contains(self.init_tagtext.text){
+//                                            if  idea.tagArray.compactMap({$0.text}).contains(self.init_tagtext.text){
                                             
                                             ZStack(){
                                                 RoundedRectangle(cornerRadius: 20)
@@ -536,7 +556,7 @@ struct MemoView: View {
                                                 Text(ideatext)
                                                     .padding()
                                             }.frame(width:200,height:100)
-                                            }
+//                                            }
                                         }
                                         
                                     }).frame(height:150)
@@ -563,9 +583,35 @@ struct MemoView: View {
                         //Saveボタンでアイディアを保存する処理
                         Button(action:{
                             withAnimation(){
+                                
+                                if IdeaData.idea.compactMap({$0.text}).contains(ideatext) != true && shared != true {
+                                    
+                                    let index = IdeaData.idea.compactMap({$0.text}).firstIndex(of: ideatext)
+                                    
+                                    if IdeaData.idea[index ?? 0].user != self.user {
+                                        
+                                        IdeaData.title = ideaTitle
+                                        IdeaData.txt = ideatext
+                                        
+                                        if tag_selected.count > 0 {
+                                            IdeaData.tag.append(tag_selected[0].text ?? "")
+                                            IdeaData.tagcolor.append(tag_selected[0].color ?? "")
+                                        }
+                                        
+                                        if tag_selected.count > 1 {
+                                            IdeaData.tag.append(tag_selected[1].text ?? "")
+                                            IdeaData.tagcolor.append(tag_selected[1].color ?? "")
+                                        }
+                                        
+                                        IdeaData.writeMsg()
+                                        
+                                    }
+                                }
+                                
                                 self.add()
                                 self.ideatext = ""
                                 self.tag_selected.removeAll()
+                                self.shared = false
                                 if init_tagtext.text != "" {
                                     
                                     let index = tags.compactMap({$0.text}).firstIndex(of: init_tagtext.text)
@@ -578,6 +624,10 @@ struct MemoView: View {
                                     tag_selected.append(tags[index!])
                                     
                                 }
+                                
+                               
+                                
+                                
                             }
                         }){
                             
@@ -590,16 +640,16 @@ struct MemoView: View {
                             .shadow(radius:1,x:0,y:4)
                             .frame(width : 120,height : 30)
                             .padding(.bottom, 60)
-                        }.disabled(self.ideatext == "" ? true : false)
+                        }.disabled(self.ideaTitle == "" ? true : false)
                         .foregroundColor(Color("top"))
                         .buttonStyle(GradientButtonStyle())
-                        .opacity(self.ideatext == "" ? 0.5 : 1)
+                        .opacity(self.ideaTitle == "" ? 0.5 : 1)
                         
                     }
                 }.padding(.bottom)
                 .disabled(self.tagEdited)
-                .frame(height : modal ? UIScreen.main.bounds.height + 50 : nil)
-                .offset(y : modal ? -50 : 0)
+//                .frame(height : modal ? UIScreen.main.bounds.height + 50 : nil)
+//                .offset(y : modal ? -50 : 0)
                 
                 
                 if self.tagEdited {
@@ -679,7 +729,6 @@ struct MemoView: View {
             }
             .background(Color("primary"))
             .edgesIgnoringSafeArea(.all)
-
             .onAppear(perform: {
                 if init_tagtext.text != "" {
                     
@@ -694,6 +743,8 @@ struct MemoView: View {
                     
                 }
             })
+//        }
+            
     }
 }
 //
@@ -836,3 +887,9 @@ class ini_tag : ObservableObject {
         
     }
 }
+//
+//struct MemoView_Previews: PreviewProvider {
+//    static var previews: some View {
+//            MemoView()
+//    }
+//}

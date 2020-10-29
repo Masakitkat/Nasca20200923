@@ -3,12 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32041042142CDDD0A7394DD1 /* Pods_Nasca20200923Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B269EC35AFA506357A9716FB /* Pods_Nasca20200923Tests.framework */; };
+		4EB269E36E73824970F4B708 /* Pods_Nasca20200923.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BABA30824C2737EB337E661 /* Pods_Nasca20200923.framework */; };
+		90ECE2802DD655223E257E3D /* Pods_Nasca20200923_Nasca20200923UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC27BBED86B5C633D8E84D6 /* Pods_Nasca20200923_Nasca20200923UITests.framework */; };
 		F4034700252EEB160051417E /* MemoModalView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40346FF252EEB160051417E /* MemoModalView2.swift */; };
+		F43717D8254781CC003DEA22 /* ProfileSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43717D7254781CC003DEA22 /* ProfileSetting.swift */; };
+		F43717E025478877003DEA22 /* TextEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43717DF25478877003DEA22 /* TextEdit.swift */; };
 		F4883B97252DED8300F43787 /* ListDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4883B96252DED8300F43787 /* ListDetail.swift */; };
+		F4B63985253BFF9F00D8E202 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B63984253BFF9F00D8E202 /* ChatView.swift */; };
+		F4B63A3B253C376100D8E202 /* AccountSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B63A3A253C376100D8E202 /* AccountSetting.swift */; };
 		F4C259B6251B98780028E556 /* Nasca20200923App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C259B5251B98780028E556 /* Nasca20200923App.swift */; };
 		F4C259B8251B98780028E556 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C259B7251B98780028E556 /* ContentView.swift */; };
 		F4C259BA251B98790028E556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C259B9251B98790028E556 /* Assets.xcassets */; };
@@ -34,6 +41,8 @@
 		F4CCC6BF253B08C300D15E08 /* OnlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CCC6BE253B08C300D15E08 /* OnlineView.swift */; };
 		F4D2C8F0251F59BC00974C9F /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2C8EF251F59BC00974C9F /* GraphView.swift */; };
 		F4D2C8F5251F6A4000974C9F /* SonSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2C8F4251F6A4000974C9F /* SonSummaryView.swift */; };
+		F4D6A66A253BDCB000C68B35 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4D6A669253BDCB000C68B35 /* GoogleService-Info.plist */; };
+		F4D6A69D253BE3B100C68B35 /* FBTest1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D6A69C253BE3B100C68B35 /* FBTest1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +63,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BABA30824C2737EB337E661 /* Pods_Nasca20200923.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nasca20200923.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C47F4C62F85F42FD8BD373E /* Pods-Nasca20200923.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nasca20200923.debug.xcconfig"; path = "Target Support Files/Pods-Nasca20200923/Pods-Nasca20200923.debug.xcconfig"; sourceTree = "<group>"; };
+		5FC27BBED86B5C633D8E84D6 /* Pods_Nasca20200923_Nasca20200923UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nasca20200923_Nasca20200923UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68A0DBD986EDF34FFD7B85BF /* Pods-Nasca20200923-Nasca20200923UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nasca20200923-Nasca20200923UITests.release.xcconfig"; path = "Target Support Files/Pods-Nasca20200923-Nasca20200923UITests/Pods-Nasca20200923-Nasca20200923UITests.release.xcconfig"; sourceTree = "<group>"; };
+		822D1414753F4D127BB46824 /* Pods-Nasca20200923-Nasca20200923UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nasca20200923-Nasca20200923UITests.debug.xcconfig"; path = "Target Support Files/Pods-Nasca20200923-Nasca20200923UITests/Pods-Nasca20200923-Nasca20200923UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		84A18D580C7C7AD311DC1BF2 /* Pods-Nasca20200923Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nasca20200923Tests.release.xcconfig"; path = "Target Support Files/Pods-Nasca20200923Tests/Pods-Nasca20200923Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B269EC35AFA506357A9716FB /* Pods_Nasca20200923Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nasca20200923Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1CCA2DA2C16AE13AA5886B3 /* Pods-Nasca20200923.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nasca20200923.release.xcconfig"; path = "Target Support Files/Pods-Nasca20200923/Pods-Nasca20200923.release.xcconfig"; sourceTree = "<group>"; };
+		D6ED7355580E9FDAC45E8F9E /* Pods-Nasca20200923Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nasca20200923Tests.debug.xcconfig"; path = "Target Support Files/Pods-Nasca20200923Tests/Pods-Nasca20200923Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F40346FF252EEB160051417E /* MemoModalView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoModalView2.swift; sourceTree = "<group>"; };
+		F43717D7254781CC003DEA22 /* ProfileSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetting.swift; sourceTree = "<group>"; };
+		F43717DF25478877003DEA22 /* TextEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEdit.swift; sourceTree = "<group>"; };
 		F4883B96252DED8300F43787 /* ListDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetail.swift; sourceTree = "<group>"; };
+		F4B63984253BFF9F00D8E202 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		F4B63A3A253C376100D8E202 /* AccountSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSetting.swift; sourceTree = "<group>"; };
 		F4C259B2251B98780028E556 /* Nasca20200923.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nasca20200923.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C259B5251B98780028E556 /* Nasca20200923App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nasca20200923App.swift; sourceTree = "<group>"; };
 		F4C259B7251B98780028E556 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +109,8 @@
 		F4CCC6BE253B08C300D15E08 /* OnlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineView.swift; sourceTree = "<group>"; };
 		F4D2C8EF251F59BC00974C9F /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		F4D2C8F4251F6A4000974C9F /* SonSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonSummaryView.swift; sourceTree = "<group>"; };
+		F4D6A669253BDCB000C68B35 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F4D6A69C253BE3B100C68B35 /* FBTest1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBTest1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EB269E36E73824970F4B708 /* Pods_Nasca20200923.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32041042142CDDD0A7394DD1 /* Pods_Nasca20200923Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,12 +134,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90ECE2802DD655223E257E3D /* Pods_Nasca20200923_Nasca20200923UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D1B7ABF6A6F136A3F777C2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BABA30824C2737EB337E661 /* Pods_Nasca20200923.framework */,
+				5FC27BBED86B5C633D8E84D6 /* Pods_Nasca20200923_Nasca20200923UITests.framework */,
+				B269EC35AFA506357A9716FB /* Pods_Nasca20200923Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5570E362BB85094822E23E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C47F4C62F85F42FD8BD373E /* Pods-Nasca20200923.debug.xcconfig */,
+				D1CCA2DA2C16AE13AA5886B3 /* Pods-Nasca20200923.release.xcconfig */,
+				822D1414753F4D127BB46824 /* Pods-Nasca20200923-Nasca20200923UITests.debug.xcconfig */,
+				68A0DBD986EDF34FFD7B85BF /* Pods-Nasca20200923-Nasca20200923UITests.release.xcconfig */,
+				D6ED7355580E9FDAC45E8F9E /* Pods-Nasca20200923Tests.debug.xcconfig */,
+				84A18D580C7C7AD311DC1BF2 /* Pods-Nasca20200923Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F4C259A9251B98780028E556 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +175,8 @@
 				F4C259CB251B98790028E556 /* Nasca20200923Tests */,
 				F4C259D6251B98790028E556 /* Nasca20200923UITests */,
 				F4C259B3251B98780028E556 /* Products */,
+				D5570E362BB85094822E23E0 /* Pods */,
+				7D1B7ABF6A6F136A3F777C2D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +195,8 @@
 			children = (
 				F4C259B5251B98780028E556 /* Nasca20200923App.swift */,
 				F4C259B7251B98780028E556 /* ContentView.swift */,
+				F4D6A69C253BE3B100C68B35 /* FBTest1.swift */,
+				F4B63984253BFF9F00D8E202 /* ChatView.swift */,
 				F4C25A42251BA80F0028E556 /* TopView.swift */,
 				F4C25A52251BA9060028E556 /* InstructionView.swift */,
 				F4CCC6BE253B08C300D15E08 /* OnlineView.swift */,
@@ -156,11 +210,15 @@
 				F4D2C8F4251F6A4000974C9F /* SonSummaryView.swift */,
 				F4CCC63D253020F900D15E08 /* Nasca_game1.swift */,
 				F4CCC6A3253ADE7900D15E08 /* LiquidSwipeView.swift */,
+				F4B63A3A253C376100D8E202 /* AccountSetting.swift */,
+				F43717D7254781CC003DEA22 /* ProfileSetting.swift */,
+				F43717DF25478877003DEA22 /* TextEdit.swift */,
 				F4CCC6AE253ADEA000D15E08 /* SliderData.swift */,
 				F4CCC6B6253ADEB100D15E08 /* WaveView.swift */,
 				F4C259B9251B98790028E556 /* Assets.xcassets */,
 				F4C259BE251B98790028E556 /* Persistence.swift */,
 				F4C259C3251B98790028E556 /* Info.plist */,
+				F4D6A669253BDCB000C68B35 /* GoogleService-Info.plist */,
 				F4C259C0251B98790028E556 /* Nasca20200923.xcdatamodeld */,
 				F4C259BB251B98790028E556 /* Preview Content */,
 			);
@@ -200,9 +258,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4C259DC251B98790028E556 /* Build configuration list for PBXNativeTarget "Nasca20200923" */;
 			buildPhases = (
+				C02678ABF4CFA2F2B65254E1 /* [CP] Check Pods Manifest.lock */,
 				F4C259AE251B98780028E556 /* Sources */,
 				F4C259AF251B98780028E556 /* Frameworks */,
 				F4C259B0251B98780028E556 /* Resources */,
+				DA8A5587F2A11817C7915C41 /* [CP] Embed Pods Frameworks */,
+				03919BD47A47149905564DAB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,6 +278,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4C259DF251B98790028E556 /* Build configuration list for PBXNativeTarget "Nasca20200923Tests" */;
 			buildPhases = (
+				96122F0B5FB9EAFC860466DB /* [CP] Check Pods Manifest.lock */,
 				F4C259C4251B98790028E556 /* Sources */,
 				F4C259C5251B98790028E556 /* Frameworks */,
 				F4C259C6251B98790028E556 /* Resources */,
@@ -235,9 +297,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4C259E2251B98790028E556 /* Build configuration list for PBXNativeTarget "Nasca20200923UITests" */;
 			buildPhases = (
+				86790EE30C4540362B37AA68 /* [CP] Check Pods Manifest.lock */,
 				F4C259CF251B98790028E556 /* Sources */,
 				F4C259D0251B98790028E556 /* Frameworks */,
 				F4C259D1251B98790028E556 /* Resources */,
+				877BAA407FA48F12D4DCCE0E /* [CP] Embed Pods Frameworks */,
+				2B9C22B5289D741A67FEF011 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -298,6 +363,7 @@
 			files = (
 				F4C259BD251B98790028E556 /* Preview Assets.xcassets in Resources */,
 				F4C259BA251B98790028E556 /* Assets.xcassets in Resources */,
+				F4D6A66A253BDCB000C68B35 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +383,143 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03919BD47A47149905564DAB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nasca20200923/Pods-Nasca20200923-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nasca20200923/Pods-Nasca20200923-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nasca20200923/Pods-Nasca20200923-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B9C22B5289D741A67FEF011 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nasca20200923-Nasca20200923UITests/Pods-Nasca20200923-Nasca20200923UITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nasca20200923-Nasca20200923UITests/Pods-Nasca20200923-Nasca20200923UITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nasca20200923-Nasca20200923UITests/Pods-Nasca20200923-Nasca20200923UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86790EE30C4540362B37AA68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nasca20200923-Nasca20200923UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		877BAA407FA48F12D4DCCE0E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nasca20200923-Nasca20200923UITests/Pods-Nasca20200923-Nasca20200923UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nasca20200923-Nasca20200923UITests/Pods-Nasca20200923-Nasca20200923UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nasca20200923-Nasca20200923UITests/Pods-Nasca20200923-Nasca20200923UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96122F0B5FB9EAFC860466DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nasca20200923Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C02678ABF4CFA2F2B65254E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nasca20200923-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA8A5587F2A11817C7915C41 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nasca20200923/Pods-Nasca20200923-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nasca20200923/Pods-Nasca20200923-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nasca20200923/Pods-Nasca20200923-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F4C259AE251B98780028E556 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -331,13 +534,18 @@
 				F4883B97252DED8300F43787 /* ListDetail.swift in Sources */,
 				F4C25A48251BA8F70028E556 /* ListView.swift in Sources */,
 				F4CCC6A4253ADE7900D15E08 /* LiquidSwipeView.swift in Sources */,
+				F43717D8254781CC003DEA22 /* ProfileSetting.swift in Sources */,
+				F4D6A69D253BE3B100C68B35 /* FBTest1.swift in Sources */,
 				F4C25A23251B9EBC0028E556 /* Tag+CoreDataClass.swift in Sources */,
 				F4D2C8F5251F6A4000974C9F /* SonSummaryView.swift in Sources */,
 				F4C259B8251B98780028E556 /* ContentView.swift in Sources */,
 				F4CCC65D25342A8300D15E08 /* TagModalView.swift in Sources */,
 				F4D2C8F0251F59BC00974C9F /* GraphView.swift in Sources */,
+				F43717E025478877003DEA22 /* TextEdit.swift in Sources */,
 				F4034700252EEB160051417E /* MemoModalView2.swift in Sources */,
 				F4C259C2251B98790028E556 /* Nasca20200923.xcdatamodeld in Sources */,
+				F4B63985253BFF9F00D8E202 /* ChatView.swift in Sources */,
+				F4B63A3B253C376100D8E202 /* AccountSetting.swift in Sources */,
 				F4C25A1E251B9E660028E556 /* Tag+CoreDataProperties.swift in Sources */,
 				F4C25A53251BA9060028E556 /* InstructionView.swift in Sources */,
 				F4C25A43251BA80F0028E556 /* TopView.swift in Sources */,
@@ -498,6 +706,7 @@
 		};
 		F4C259DD251B98790028E556 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C47F4C62F85F42FD8BD373E /* Pods-Nasca20200923.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -512,6 +721,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.03;
 				PRODUCT_BUNDLE_IDENTIFIER = Nasca.Nasca20200923;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -521,6 +731,7 @@
 		};
 		F4C259DE251B98790028E556 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1CCA2DA2C16AE13AA5886B3 /* Pods-Nasca20200923.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -535,6 +746,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.03;
 				PRODUCT_BUNDLE_IDENTIFIER = Nasca.Nasca20200923;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -544,6 +756,7 @@
 		};
 		F4C259E0251B98790028E556 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6ED7355580E9FDAC45E8F9E /* Pods-Nasca20200923Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -566,6 +779,7 @@
 		};
 		F4C259E1251B98790028E556 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84A18D580C7C7AD311DC1BF2 /* Pods-Nasca20200923Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -588,6 +802,7 @@
 		};
 		F4C259E3251B98790028E556 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 822D1414753F4D127BB46824 /* Pods-Nasca20200923-Nasca20200923UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -608,6 +823,7 @@
 		};
 		F4C259E4251B98790028E556 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68A0DBD986EDF34FFD7B85BF /* Pods-Nasca20200923-Nasca20200923UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

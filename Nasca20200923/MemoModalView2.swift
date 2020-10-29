@@ -9,12 +9,16 @@ import SwiftUI
 
 struct MemoModalView: View {
     
-    @State var modal = true
+    @State var modal = false
     @State var ini_tagtext = ini_tag()
 //    let animation : Namespace.ID
+    @State var activeSheet : ActiveSheet?
         
     var body: some View {
-        
-        MemoView(init_tagtext: ini_tagtext, modal : modal)
+        MemoView(init_tagtext: ini_tagtext, modal : $modal)
+        .onTapGesture {
+            UIApplication.shared.closeKeyboard()
+        }
+        .keyboardAdaptive()
     }
 }

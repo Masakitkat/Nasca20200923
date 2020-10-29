@@ -21,6 +21,7 @@ struct TagModalView: View {
     @Binding var activeSheet: ActiveSheet?
     
     @State var issub = false
+    @State var isshared = true
     
     var hex = ["#EBCA3F","#D26873","#D26873","#2A34E1","#2A34E1","#EBCA3F","486d8b","d22b55","81b27f","#EBCA3F","#D26873","#D26873","#2A34E1","#2A34E1","#EBCA3F","486d8b","d22b55","81b27f"]
     
@@ -116,6 +117,28 @@ struct TagModalView: View {
                 .frame(height:200,alignment: .top)
                 }
                 
+                VStack{
+                    
+                    Button(action : {
+                        
+                        isshared.toggle()
+                        
+                    }){
+                        
+                        HStack{
+                            Spacer()
+                            Image(systemName: isshared ? "square" : "checkmark")
+                                .foregroundColor(isshared ? .black : .blue)
+                            
+                            Text("共有しないタグか？")
+                            
+                            Spacer()
+                        }.padding(.horizontal)
+                    }
+                    
+                    
+                }
+                
                 //            .padding(.horizontal)
                 HStack{
                     Spacer()
@@ -165,7 +188,7 @@ struct TagModalView: View {
                         }
                     }
                     
-                }
+                }.padding(.trailing)
                 
             }.padding()
             
@@ -175,6 +198,10 @@ struct TagModalView: View {
         .onDisappear(perform: {
             self.tag_temp = ""
         })
+        .onTapGesture {
+            UIApplication.shared.closeKeyboard()
+        }
+        .keyboardAdaptive()
     }
 }
 //

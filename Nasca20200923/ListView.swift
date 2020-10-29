@@ -136,6 +136,7 @@ struct ListView : View {
                  
                  Color("primary")
                      .clipShape(CustomCorner(corner: .topRight, size: 83))
+                
                 VStack(spacing: 10){
                     
                     
@@ -143,7 +144,7 @@ struct ListView : View {
                     
                     HStack{
 //                       else {
-                        Text("全てのリスト")
+                        Text("あなたのリスト")
                             .font(.title2)
                             .fontWeight(.bold)
                         
@@ -159,7 +160,8 @@ struct ListView : View {
                         })
                     }
                     .frame(height : 30)
-                    .padding(.horizontal,20)
+                    .padding(.horizontal,15)
+//                    .padding(.horizontal,20)
                     .padding(.top,30)
                     }
                     else if tag_selectedbutton {
@@ -805,11 +807,33 @@ struct IdeaView : View {
                    .font(.caption)
                     .frame(height :30)
                    .lineLimit(3)
-
+                HStack{
                 Text(idea.date ?? Date(), formatter: dateformatter)
                    .font(.system(size: 10))
                    .foregroundColor(.gray)
                    .font(.caption)
+                    
+                    Spacer()
+                    
+                        Image(systemName: "heart.fill")
+                            .foregroundColor(Color.red.opacity(0.6))
+                            .font(.caption)
+                        Text("\(Int.random(in : 1..<5))")
+                            .font(.caption)
+                    
+                    
+                        Image(systemName:"bubble.right.fill")
+                            .foregroundColor(Color.yellow.opacity(0.6))
+                            .font(.caption)
+                        Text("\(Int.random(in : 1..<5))")
+                            .font(.caption)
+                        
+                        Image(systemName:"arrowshape.turn.up.right.fill")
+                            .foregroundColor(Color.blue.opacity(0.6))
+                            .font(.caption)
+                        Text("\(Int.random(in : 1..<5))")
+                            .font(.caption)
+                }
                
             }).padding(.vertical,10)
             

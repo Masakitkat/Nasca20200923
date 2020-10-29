@@ -16,8 +16,9 @@ struct MemoModal_game: View {
     @State var conc_text = ""
     @State var abst_image = Color.white.opacity(0.3)
     @State var abst_text = ""
+    @State var activeSheet : ActiveSheet?
     
     var body: some View {
-        MemoView(modal : modal, game : game, conc_image : conc_image, conc_text : conc_text, abst_image : abst_image, abst_text : abst_text)
+        MemoView(modal : $modal, game : game, conc_image : conc_image, conc_text : conc_text, abst_image : abst_image, abst_text : abst_text)
     }
 }

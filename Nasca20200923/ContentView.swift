@@ -121,7 +121,7 @@ struct Main: View {
                     .animation(.interactiveSpring())
                 
             case "Memo":
-                MemoView()
+                MemoView(modal : $modal)
                     .animation(.interactiveSpring())
                     .onAppear(){
                         pagetitle = "Idea Memo"
@@ -132,7 +132,18 @@ struct Main: View {
                     .onAppear(){
                         pagetitle = "DashBoard"
                     }
-                
+            case "Chat":
+                Home2()
+                    .onAppear(perform: {
+                        withAnimation{
+                        self.bottomhide = true
+                        }
+                    })
+                    .onDisappear(perform: {
+                        withAnimation{
+                        self.bottomhide = false
+                        }
+                    })
                 
             case "List":
                 ListView(init_tagtext: self.init_tagtext, tophide : $tophide, animation: animation)
@@ -158,13 +169,42 @@ struct Main: View {
                 
                 OnlineView()
                     .onAppear(perform: {
-                        pagetitle = "Home"
+                        pagetitle = "Online"
+                    })
+                
+            case "Account":
+                AccountSetting(selected: $selectedView)
+                    .onAppear(perform: {
+                        withAnimation{
+                        self.tophide = true
+                        self.bottomhide = true
+                        }
+                    })
+                    .onDisappear(perform: {
+                        withAnimation{
+                        self.tophide = false
+                        self.bottomhide = false
+                        }
+                    })
+            case "Login":
+                Login(selected: $selectedView,login: $modal)
+                    .onAppear(perform: {
+                        withAnimation{
+                        self.tophide = true
+                        self.bottomhide = true
+                        }
+                    })
+                    .onDisappear(perform: {
+                        withAnimation{
+                        self.tophide = false
+                        self.bottomhide = false
+                        }
                     })
                 
         default:
             OnlineView()
                 .onAppear(perform: {
-                    pagetitle = "Home"
+                    pagetitle = "Online"
                 })
 //            MemoView()
 //                .onAppear(){
@@ -194,7 +234,10 @@ struct Main: View {
                         
                         Spacer(minLength: 0)
                         
-                        Button(action: {}, label: {
+                        Button(action: {
+                            selectedView = "Chat"
+                            
+                        }, label: {
                             
                             Image(systemName: "paperplane")
                                 .font(.system(size: 22))
@@ -211,7 +254,7 @@ struct Main: View {
             }
             .padding(.bottom)
             .background(Color("top").ignoresSafeArea(.all, edges: .all))
-            .clipShape(CustomCorner(corner: .bottomLeft, size: selectedView == "List" ? 83 : 0))
+            .clipShape(CustomCorner(corner: .bottomLeft, size: 83))
             .opacity(selectedView == "Top" || selectedView == "Inst" || self.tophide ? 0 : 1)
 
             Spacer(minLength: 0)
@@ -255,7 +298,11 @@ struct Main: View {
                    .padding(.horizontal)
                    .padding(.top,edges?.top)
                    
-                Button(action:{}){
+                Button(action:{
+                    
+                    self.selectedView = "Account"
+                    self.show.toggle()
+                }){
                     
                 
                    HStack(spacing:15){
@@ -289,8 +336,8 @@ struct Main: View {
                    
                    VStack(alignment: .leading, content : {
                        
-                    MenuButtons(image: "network", title : "交流する", view: "Online",selected: $selectedView, show : $show)
-                    MenuButtons(image: "list.bullet", title : "リストを見る", view: "List",selected: $selectedView, show : $show)
+                    MenuButtons(image: "house.fill", title : "アイディアを探す", view: "Online",selected: $selectedView, show : $show)
+                    MenuButtons(image: "list.bullet", title : "リストを見返す", view: "List",selected: $selectedView, show : $show)
                     MenuButtons(image: "chart.bar.xaxis", title : "グラフで分析する", view: "Graph",selected: $selectedView, show : $show)
                     MenuButtons(image: "swift", title : "考えてみる", view: "Son",selected: $selectedView, show : $show)
                     MenuButtons(image: "gear", title : "設定", view: "test",selected: $selectedView, show : $show)
@@ -318,7 +365,8 @@ struct Main: View {
            
            
        }
-        .gesture(selectedView == "Top" || selectedView == "Inst" ? nil : drag)
+//        .gesture(selectedView == "Top" || selectedView == "Inst" ? nil : drag)
+        .background(Color("primary"))
         .sheet(isPresented: self.$modal, content: {
             MemoModalView(ini_tagtext: self.init_tagtext)
         })
@@ -465,7 +513,7 @@ struct TabBar : View {
             
             Button(action:{
                 withAnimation{
-                selectedView = "Son"
+                selectedView = "Account"
                 }
             }){
                 VStack(spacing:10){
