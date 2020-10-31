@@ -837,28 +837,26 @@ struct ListDetail: View {
             if IdeaData.idea.compactMap({$0.title}).contains(idea.title) != true && shared != true{
                
                 let index = IdeaData.idea.compactMap({$0.title}).firstIndex(of: idea.title)
-                
+                var count = 0
                 if index == nil || IdeaData.idea[index ?? 0].user != self.user {
     
                 IdeaData.title = idea.title ?? ""
                 IdeaData.txt = idea.text ?? ""
-                IdeaData.tag.append(idea.tagArray[0].text ?? "")
-                IdeaData.tag.append(idea.tagArray[0].text ?? "")
-                if idea.tagArray.count > 0 {
-                    IdeaData.tag.append(idea.tagArray[0].text ?? "")
-                    IdeaData.tagcolor.append(idea.tagArray[0].color ?? "")
+//                IdeaData.tag.append(idea.tagArray[0].text ?? "")
+//                IdeaData.tag.append(idea.tagArray[0].text ?? "")
+                    
+                while count <= idea.tagArray.count-1 && idea.tagArray.count != 0 {
+                IdeaData.tag.append(idea.tagArray[count].text ?? "")
+                IdeaData.tagcolor.append(idea.tagArray[0].color ?? "")
+                count += 1
                 }
-                if idea.tagArray.count > 1  {
-                    IdeaData.tag.append(idea.tagArray[1].text ?? "")
-                    IdeaData.tagcolor.append(idea.tagArray[1].color ?? "")
-                }
+                
                 IdeaData.writeMsg()
                 }
             }
             else {
-                
                 let index = IdeaData.idea.compactMap({$0.title}).firstIndex(of: idea.title)
-                if index != nil && IdeaData.idea[index ?? 0].user == self.user{
+                if index != nil && IdeaData.idea[index ?? 0].user == self.user && shared {
                     IdeaData.deleteMsg(id: IdeaData.idea[index ?? 0].id)
                 }
             }

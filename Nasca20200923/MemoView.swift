@@ -584,11 +584,11 @@ struct MemoView: View {
                         Button(action:{
                             withAnimation(){
                                 
-                                if IdeaData.idea.compactMap({$0.text}).contains(ideatext) != true && shared != true {
+                                if IdeaData.idea.compactMap({$0.title}).contains(ideaTitle) != true && shared != true {
                                     
-                                    let index = IdeaData.idea.compactMap({$0.text}).firstIndex(of: ideatext)
+                                    let index = IdeaData.idea.compactMap({$0.title}).firstIndex(of: ideaTitle)
                                     
-                                    if IdeaData.idea[index ?? 0].user != self.user {
+                                    if IdeaData.idea[index ?? 0].user != self.user || index == nil {
                                         
                                         IdeaData.title = ideaTitle
                                         IdeaData.txt = ideatext
@@ -610,6 +610,7 @@ struct MemoView: View {
                                 
                                 self.add()
                                 self.ideatext = ""
+                                self.ideaTitle = ""
                                 self.tag_selected.removeAll()
                                 self.shared = false
                                 if init_tagtext.text != "" {
