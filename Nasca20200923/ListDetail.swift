@@ -304,9 +304,10 @@ struct ListDetail: View {
                                 .frame(height: 100)
                         }
                         else {
-                            
+                            if self.ideatext != "" {
                             Text(self.ideatext)
                                 .font(.subheadline)
+                            }
 //                            Spacer()
 //                                .frame(height : 5)
                         }
@@ -327,11 +328,12 @@ struct ListDetail: View {
                                 Button(action : {
                                     self.edit_delete.toggle()
                                 }){
-                                Label(title :
-                                        {Text("フィールドを削除する")},
-                                      icon :
-                                        {Image(systemName: "minus")}
-                                )
+//                                Label(title :
+//                                        {Text("フィールドを削除する")},
+//                                      icon :
+//                                        {Image(systemName: "minus")}
+//                                )
+                                    Text("フィールドを削除する")
                                 .font(.system(size: 10))
                                 .foregroundColor(.red)
                                 }
@@ -370,16 +372,23 @@ struct ListDetail: View {
 //                                .overlay(RoundedRectangle(cornerRadius: 8).stroke(lineWidth: 1).fill(Color.gray))
                                 
                                 Label(title :
-                                        {Text("フィールドを追加")},
+                                    {Text("フィールドを追加する")},
                                       icon :
-                                        {Image(systemName: "plus")}
-                                )
+                                    {Image(systemName: "plus")}
+                                    )
+//                                        Text("フィールドを追加")
+                                        
+//                                    },
+//                                      icon :
+//                                        {Image(systemName: "plus")}
+//                                )
                                 .font(.callout)
                                 .foregroundColor(.blue)
                             }
                             .frame(height : 40)
+//                            .padding(.bottom,30)
                         }
-                        .padding(.bottom)
+                        
                         }
                     }
   
@@ -404,6 +413,7 @@ struct ListDetail: View {
                     RoundedRectangle(cornerRadius: 8)
                         .fill(Color("primary"))
                         .overlay(RoundedRectangle(cornerRadius: 8).stroke(lineWidth: 1).fill(Color.gray))
+                        .padding(.horizontal,1)
                         }
                         Text(self.edit ? "編集を終わる" : "編集する")
                         .font(.callout)
@@ -413,6 +423,43 @@ struct ListDetail: View {
 //                    .padding(.vertical,5)
 //                    .padding(.horizontal,1)
                     
+                    VStack(alignment : .leading){
+                    Text("画像")
+                        .bold()
+                        .font(.title2)
+                    
+                        VStack(spacing :5){
+                            Button(action:{}){
+                            Image(systemName: "plus.circle")
+                                .font(.system(size: 20))
+                                .frame(width : 50, alignment : .bottom)
+                                .foregroundColor(Color.black.opacity(0.8))
+                            }.buttonStyle(ExpandButtonStyle())
+                            Text("追加する")
+                                .font(.caption2)
+                        }.frame(height : 50,alignment : .center)
+                        .foregroundColor(Color.black.opacity(0.8))
+                        
+                    }
+                    
+                    VStack(alignment : .leading){
+                    Text("リンク(Youtube)")
+                        .bold()
+                        .font(.title2)
+                    
+                        VStack(spacing :5){
+                            Button(action:{}){
+                            Image(systemName: "plus.circle")
+                                .font(.system(size: 20))
+                                .frame(width : 50, alignment : .bottom)
+                                .foregroundColor(Color.black.opacity(0.8))
+                            }.buttonStyle(ExpandButtonStyle())
+                            Text("追加する")
+                                .font(.caption2)
+                        }.frame(height : 50,alignment : .center)
+                        .foregroundColor(Color.black.opacity(0.8))
+                    
+                    }
                     
                     Text("タグ")
                         .bold()
@@ -426,7 +473,7 @@ struct ListDetail: View {
                             
                             ZStack(alignment : .leading){
                                 
-                                RoundedRectangle(cornerRadius: 13)
+                                RoundedRectangle(cornerRadius: 10)
                                     .frame(height :35)
                                     .foregroundColor(Color(hex :tagcolor).opacity(0.5))
                                 Text(tagtext.prefix(10))
@@ -434,6 +481,23 @@ struct ListDetail: View {
                                     .padding()
                             }.frame(height : 35)
                         }
+                        
+                        Button(action:{
+//                                    self.tagadding.toggle()
+//                            self.activeSheet = .tag
+                        }){
+                            
+                            ZStack(alignment : .leading){
+                                
+                                RoundedRectangle(cornerRadius: 10)
+                                    .foregroundColor(Color.white.opacity(0.3))
+                                    .frame(height :40)
+                                Text("タグを追加する")
+                                    .foregroundColor(.blue)
+                                    .padding()
+                            }
+                        }
+                        
                     })
                     
                     
@@ -473,7 +537,7 @@ struct ListDetail: View {
                     //                        }.frame(height : 30)
 //                    }
                     Toggle(isOn: $shared){
-                        Text("共有しない")
+                        Text("共有する")
                             .bold()
                     }
                     .toggleStyle(SwitchToggleStyle(tint: Color("top")))
@@ -834,7 +898,7 @@ struct ListDetail: View {
                 print(error)
             }
             
-            if IdeaData.idea.compactMap({$0.title}).contains(idea.title) != true && shared != true{
+            if IdeaData.idea.compactMap({$0.title}).contains(idea.title) != true && shared {
                
                 let index = IdeaData.idea.compactMap({$0.title}).firstIndex(of: idea.title)
                 var count = 0
@@ -856,7 +920,7 @@ struct ListDetail: View {
             }
             else {
                 let index = IdeaData.idea.compactMap({$0.title}).firstIndex(of: idea.title)
-                if index != nil && IdeaData.idea[index ?? 0].user == self.user && shared {
+                if index != nil && IdeaData.idea[index ?? 0].user == self.user && shared != true {
                     IdeaData.deleteMsg(id: IdeaData.idea[index ?? 0].id)
                 }
             }

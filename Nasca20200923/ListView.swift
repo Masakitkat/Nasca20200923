@@ -64,6 +64,11 @@ struct ListView : View {
     @State var modal = false
     @State var activeSheet: ActiveSheet?
     
+    @State var liststyle = false
+    
+    var maxheight = UIScreen.main.bounds.height
+    var maxwidth = UIScreen.main.bounds.width
+    
 //    @Namespace var animation
     let animation : Namespace.ID
     
@@ -152,12 +157,22 @@ struct ListView : View {
                        
                         Spacer(minLength: 0)
                         
-                        Button(action: {}, label: {
+                        Button(action: {
+                            withAnimation{
                             
-                            Image(systemName: "slider.horizontal.3")
+                            }
+                        }, label: {
+                            
+                            Image(systemName :"magnifyingglass")
                                 .font(.system(size: 22))
-                                .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
+                                .foregroundColor(Color("top"))
                         })
+                        .buttonStyle(ExpandButtonStyle())
+                        .padding(.trailing)
+                        
+                        
+                        
+                        
                     }
                     .frame(height : 30)
                     .padding(.horizontal,15)
@@ -239,7 +254,7 @@ struct ListView : View {
                     
                     HStack{
                         
-                        Text("メインタグ")
+                        Text("タグ")
                             .font(.caption)
                             .foregroundColor(.gray)
                         
@@ -444,31 +459,63 @@ struct ListView : View {
                             .foregroundColor(.gray)
                         
                         Spacer(minLength: 0)
+                        
+                        Button(action: {
+                            withAnimation{
+                            self.liststyle = false
+                            }
+                        }, label: {
+                            
+                            Image(systemName: self.liststyle ? "rectangle.grid.1x2" : "rectangle.grid.1x2.fill")
+                                .font(.system(size: 20))
+                                .foregroundColor(Color("top"))
+                        })
+                        .buttonStyle(ExpandButtonStyle())
+                        
+                        Button(action: {
+                            withAnimation{
+                            self.liststyle=true
+                            }
+                        }, label: {
+                            
+                            Image(systemName: self.liststyle ? "rectangle.grid.2x2.fill" : "rectangle.grid.2x2")
+                                .font(.system(size: 20))
+                                .foregroundColor(Color("top"))
+                        })
+                        .buttonStyle(ExpandButtonStyle())
+                        .padding(.trailing,5)
+                        
                     }
                     .padding(.horizontal)
                     
-                 ScrollView(.vertical, showsIndicators: false, content: {                        
+                 ScrollView(.vertical, showsIndicators: false, content: {
+                    
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum : liststyle ? maxwidth/3 :  maxwidth/2))], pinnedViews: [], content: /*@START_MENU_TOKEN@*/{
+                    
                         ForEach(self.ideas, id: \.self){idea in
                             
                             
                             if  idea.tagArray.compactMap({$0.text}).contains(tag_selected?.text) || tag_selected == nil {
                                 if  idea.tagArray.compactMap({$0.text}).contains(tag_selected_2?.text) || tag_selected_2 == nil {
-                                    IdeaView(idea:idea)
-                                        .contextMenu{
-                                            Button(action: {}, label: {
-                                                Text("Edit")
-                                            })
-                                            Button(action: {
-                                                viewContext.delete(idea)
-                                                try! viewContext.save()
-                                            }, label: {
-                                                Text("Delete")
-                                            })
-                                        }
+                                    
+                                    IdeaView(idea:idea, liststyle : $liststyle)
+//                                        .contextMenu{
+//                                            Button(action: {}, label: {
+//                                                Text("Edit")
+//                                            })
+//                                            Button(action: {
+//                                                viewContext.delete(idea)
+//                                                try! viewContext.save()
+//                                            }, label: {
+//                                                Text("Delete")
+//                                            })
+//                                        }
                                 }
                             }
                             
                         }
+                    })
+                    .frame(width : maxwidth-10)
                     
                             ZStack {
                                
@@ -508,6 +555,7 @@ struct ListView : View {
                             .frame(height : 200)
                      
                  })
+                 
                  .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                 
                  }
@@ -727,6 +775,7 @@ var tabs = ["分類","場面"]
 struct TabButton : View {
     
     @Binding var selectedTab : String
+    
     var title : String
     var animation : Namespace.ID
     
@@ -766,6 +815,12 @@ struct IdeaView : View {
     
 //     var chatData : Chat
     var idea : Idea
+    
+    var maxheight = UIScreen.main.bounds.height
+    var maxwidth = UIScreen.main.bounds.width
+    
+    @Binding var liststyle : Bool
+    
    var dateformatter: DateFormatter {
            let dformat = DateFormatter()
            dformat.dateStyle = .short
@@ -777,72 +832,137 @@ struct IdeaView : View {
     
     var body: some View{
         NavigationLink(destination:ListDetail(idea:idea)){
-        ZStack {
-           
-           RoundedRectangle(cornerRadius: 20)
-            .foregroundColor(Color.white.opacity(0.6))
-               .padding(.horizontal,10)
-               .frame(height: 100)
-        HStack(spacing: 10){
-           
-           VStack {
-           Circle()
-            .frame(width :10, height: 10)
-            .foregroundColor(idea.tagArray.count == 0 ? .yellow : Color(hex : idea.tagArray[0].color ?? "") )
-           Spacer(minLength: 0)
-           }.padding(.vertical,16)
-//             Image(chatData.image)
-//                 .resizable()
-//                 .aspectRatio(contentMode: .fill)
-//                 .frame(width: 55, height: 55)
-//                 .cornerRadius(10)
-            
-            VStack(alignment: .leading, spacing: 5, content: {
+//        ZStack {
+//
+//           RoundedRectangle(cornerRadius: 20)
+//            .foregroundColor(Color.white.opacity(0.6))
+//               .padding(.horizontal,10)
+//               .frame(height: 100)
+//        HStack(spacing: 10){
+//
+//           VStack {
+//           Circle()
+//            .frame(width :10, height: 10)
+//            .foregroundColor(idea.tagArray.count == 0 ? .yellow : Color(hex : idea.tagArray[0].color ?? "") )
+//           Spacer(minLength: 0)
+//           }
+//           .padding(.vertical,16)
+////             Image(chatData.image)
+////                 .resizable()
+////                 .aspectRatio(contentMode: .fill)
+////                 .frame(width: 55, height: 55)
+////                 .cornerRadius(10)
+//
+//            VStack(alignment: .leading, spacing: 5, content: {
+//
+//                VStack(alignment: .leading, spacing: 5){
+//
+//                Text(idea.title ?? "")
+//                    .fontWeight(.bold)
+////                    .frame(height : liststyle ? 65 : nil,alignment : .topLeading)
+////                    .frame(alignment : .top)
+//                    .lineLimit(liststyle ? 3 : 2)
+//                    if liststyle != true  {
+//                Text(idea.text ?? "")
+//                   .font(.caption)
+////                    .frame(height :40)
+//                   .lineLimit(2)
+//                    }
+//
+//                }
+//                .frame(width : liststyle ? (maxwidth/1.9)-80 : maxwidth-80,height : liststyle ? 65 : 60, alignment : .topLeading)
+//
                 
-                Text((idea.title == "" ? idea.text ?? "" : idea.title) ?? "")
-                    .fontWeight(.bold)
-                    .lineLimit(1)
-                
-                Text(idea.text ?? "")
-                   .font(.caption)
-                    .frame(height :30)
-                   .lineLimit(3)
+
+//            }).padding(.vertical,10)
+//
+//            if liststyle != true {
+//            Spacer(minLength: 0)
+//            }
+//
+//
+//        }
+//        .padding(.horizontal,25)
+//
+//
+//        }.frame(width : liststyle ? maxwidth/1.9 : maxwidth)
+            ZStack {
+               
+               RoundedRectangle(cornerRadius: 20)
+                .foregroundColor(Color.white.opacity(0.6))
+                   .padding(.horizontal,10)
+    //            .frame(minHeight : 100, maxHeight: 150)
+                VStack(spacing : 10){
                 HStack{
-                Text(idea.date ?? Date(), formatter: dateformatter)
-                   .font(.system(size: 10))
-                   .foregroundColor(.gray)
-                   .font(.caption)
+                    
+                    Circle()
+                        .frame(width:10,height : 10)
+                        .foregroundColor(idea.tagArray.count == 0 ? .yellow : Color(hex : idea.tagArray[0].color ?? "") )
+                    Text(idea.title ?? "")
+                        .fontWeight(.bold)
+                        .lineLimit(5)
                     
                     Spacer()
                     
-                        Image(systemName: "heart.fill")
-                            .foregroundColor(Color.red.opacity(0.6))
-                            .font(.caption)
-                        Text("\(Int.random(in : 1..<5))")
-                            .font(.caption)
-                    
-                    
-                        Image(systemName:"bubble.right.fill")
-                            .foregroundColor(Color.yellow.opacity(0.6))
-                            .font(.caption)
-                        Text("\(Int.random(in : 1..<5))")
-                            .font(.caption)
-                        
-                        Image(systemName:"arrowshape.turn.up.right.fill")
-                            .foregroundColor(Color.blue.opacity(0.6))
-                            .font(.caption)
-                        Text("\(Int.random(in : 1..<5))")
-                            .font(.caption)
                 }
-               
-            }).padding(.vertical,10)
+                    
+                    if self.liststyle != true {
+                    HStack{
+                        Spacer()
+                            .frame(width:20)
+                        Text(idea.text ?? "")
+                    .font(.caption)
+                    .lineLimit(3)
+                    }.frame(width : liststyle ? (maxwidth-50)/2 : maxwidth-50,alignment : .leading)
+                }
+                    HStack{
+                        
+                        Spacer()
+                            .frame(width:20)
+                        
+                        if liststyle != true {
+                    Text(idea.date ?? Date(), formatter: dateformatter)
+                       .font(.system(size: 10))
+                       .foregroundColor(.gray)
+                       .font(.caption)
+
+
+                        Spacer()
+                        }
+                            Image(systemName: "heart.fill")
+                                .foregroundColor(Color.red.opacity(0.6))
+                                .font(.caption)
+                            Text("\(Int.random(in : 1..<5))")
+                                .font(.caption)
+
+
+                            Image(systemName:"bubble.right.fill")
+                                .foregroundColor(Color.yellow.opacity(0.6))
+                                .font(.caption)
+                            Text("\(Int.random(in : 1..<5))")
+                                .font(.caption)
+
+                            Image(systemName:"arrowshape.turn.up.right.fill")
+                                .foregroundColor(Color.blue.opacity(0.6))
+                                .font(.caption)
+                            Text("\(Int.random(in : 1..<5))")
+                                .font(.caption)
+                        
+                        if liststyle {
+                            
+                            Spacer(minLength: 0)
+                        }
+                        
+                    }.frame(alignment : .center)
+                    
+                }
+                .frame(width : liststyle ? (maxwidth-50)/2 : maxwidth-50)
+                .padding(.vertical)
+            }
+            .frame(maxHeight: liststyle ? 150 : idea.text != "" ? 120 : 100)
+            .frame(width : liststyle ? maxwidth/1.9 : maxwidth)
+            .padding(.horizontal)
             
-            Spacer(minLength: 0)
-            
-            
-        }.padding(.horizontal,25)
-        
-        }
         }
         
     }

@@ -127,32 +127,32 @@ struct MemoView: View {
 
         }
     
-    func proverb_loop() {
-     
-        func iteration(){
-            
-            let i = Double.random(in: 1 ... 5)
-                
-                
-            self.proverbs = self.proverbs.shuffled()
-            
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + i) {
-                iteration()
-            }
-            
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            iteration()
-        }
-        
-    }
-    
+//    func proverb_loop() {
+//
+//        func iteration(){
+//
+//            let i = Double.random(in: 1 ... 5)
+//
+//
+//            self.proverbs = self.proverbs.shuffled()
+//
+//
+//            DispatchQueue.main.asyncAfter(deadline: .now() + i) {
+//                iteration()
+//            }
+//
+//        }
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//            iteration()
+//        }
+//
+//    }
+//
     
     var body: some View {
 
-//        NavigationView{
+        NavigationView{
             ZStack {
                 
                 VStack {
@@ -188,9 +188,7 @@ struct MemoView: View {
                     .padding(.horizontal)
                     
                     }
-                    .onAppear(perform: {
-                        proverb_loop()
-                    })
+                    
                     
 //                    .padding(.top, 120)
                     
@@ -453,7 +451,7 @@ struct MemoView: View {
                             })
                             
                             Toggle(isOn: $shared){
-                                Text("共有しない")
+                                Text("共有する")
                                     .bold()
                             }
                             .toggleStyle(SwitchToggleStyle(tint: Color("top")))
@@ -546,16 +544,11 @@ struct MemoView: View {
                                         ForEach(self.rand_ideas, id :\.self){ idea in
                                         
                                             
-                                            let ideatext = idea.title ?? ""
+                                            IdeaView_modal(idea : idea)
                                             
 //                                            if  idea.tagArray.compactMap({$0.text}).contains(self.init_tagtext.text){
                                             
-                                            ZStack(){
-                                                RoundedRectangle(cornerRadius: 20)
-                                                    .fill(Color.white.opacity(0.3))
-                                                Text(ideatext)
-                                                    .padding()
-                                            }.frame(width:200,height:100)
+                                            
 //                                            }
                                         }
                                         
@@ -584,7 +577,7 @@ struct MemoView: View {
                         Button(action:{
                             withAnimation(){
                                 
-                                if IdeaData.idea.compactMap({$0.title}).contains(ideaTitle) != true && shared != true {
+                                if IdeaData.idea.compactMap({$0.title}).contains(ideaTitle) != true && shared {
                                     
                                     let index = IdeaData.idea.compactMap({$0.title}).firstIndex(of: ideaTitle)
                                     
@@ -744,7 +737,7 @@ struct MemoView: View {
                     
                 }
             })
-//        }
+        }
             
     }
 }
@@ -894,3 +887,27 @@ class ini_tag : ObservableObject {
 //            MemoView()
 //    }
 //}
+
+struct IdeaView_modal : View {
+    
+//     var chatData : Chat
+    var idea : Idea
+    
+    var maxheight = UIScreen.main.bounds.height
+    var maxwidth = UIScreen.main.bounds.width
+    
+    var body: some View{
+        NavigationLink(destination:ListDetail(idea:idea)){
+
+            ZStack(){
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(Color.white.opacity(0.3))
+                Text(idea.title ?? "")
+                    .foregroundColor(Color("top"))
+                    .padding()
+            }.frame(width:200,height:100)
+     
+        }
+        
+    }
+}

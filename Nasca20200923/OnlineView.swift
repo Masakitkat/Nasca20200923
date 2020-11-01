@@ -77,10 +77,14 @@ struct OnlineView: View {
                     .bold()
                     
                     Spacer()
+                    Button(action:{}){
                 Image(systemName: "rectangle.grid.1x2.fill")
                     .padding(.trailing)
+                    }.buttonStyle(ExpandButtonStyle())
+                    Button(action:{}){
                 Image(systemName: "rectangle.grid.2x2")
                     .padding(.trailing)
+                    }.buttonStyle(ExpandButtonStyle())
                     
                 }
                 .frame(width : maxwidth - 20, alignment : .topLeading)

@@ -78,6 +78,7 @@
 		F4883B96252DED8300F43787 /* ListDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetail.swift; sourceTree = "<group>"; };
 		F4B63984253BFF9F00D8E202 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		F4B63A3A253C376100D8E202 /* AccountSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSetting.swift; sourceTree = "<group>"; };
+		F4B9D4CE254EC04F00B0566B /* Nasca20200923.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nasca20200923.entitlements; sourceTree = "<group>"; };
 		F4C259B2251B98780028E556 /* Nasca20200923.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nasca20200923.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C259B5251B98780028E556 /* Nasca20200923App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nasca20200923App.swift; sourceTree = "<group>"; };
 		F4C259B7251B98780028E556 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -193,6 +194,7 @@
 		F4C259B4251B98780028E556 /* Nasca20200923 */ = {
 			isa = PBXGroup;
 			children = (
+				F4B9D4CE254EC04F00B0566B /* Nasca20200923.entitlements */,
 				F4C259B5251B98780028E556 /* Nasca20200923App.swift */,
 				F4C259B7251B98780028E556 /* ContentView.swift */,
 				F4D6A69C253BE3B100C68B35 /* FBTest1.swift */,
@@ -710,6 +712,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Nasca20200923/Nasca20200923.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Nasca20200923/Preview Content\"";
 				DEVELOPMENT_TEAM = 856ZD22WG5;
@@ -735,6 +738,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Nasca20200923/Nasca20200923.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Nasca20200923/Preview Content\"";
 				DEVELOPMENT_TEAM = 856ZD22WG5;
